@@ -22,8 +22,9 @@ export default function App() {
       <Text>Result: {tulos}</Text> 
       <TextInput inputMode='numeric' style={styles.input} onChangeText={nroYksi => setNroYksi(nroYksi)} value={nroYksi}/>
       <TextInput inputMode='numeric' style={styles.input} onChangeText={nroKaksi => setNroKaksi(nroKaksi)} value={nroKaksi}/>
-      <View style={{ flexDirection:'row'}}>
+      <View style={styles.button} >
       <Button onPress={buttonPlusPressed} title="+" />
+      <Text style={{ backgroundColor: 'white'}}>    </Text>
       <Button onPress={buttonMinusPressed} title="-" />
       </View>
       <StatusBar style="auto" />
@@ -42,5 +43,10 @@ const styles = StyleSheet.create({
     width:200  , 
     borderColor: 'gray', 
     borderWidth: 1
+  },
+  button : {
+    flexDirection: 'row',
+    backgroundColor: 'pink',
+    marginTop: 5,
   },
 });
